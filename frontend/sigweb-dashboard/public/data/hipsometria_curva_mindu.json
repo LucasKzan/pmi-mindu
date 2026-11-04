@@ -1,0 +1,673 @@
+{
+  "cota_min_m": 5,
+  "cota_max_m": 115,
+  "cota_media_m": 48.4,
+  "curva_cotas": [
+    {
+      "DN": 5,
+      "area_km2": 0.0012,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 0
+    },
+    {
+      "DN": 6,
+      "area_km2": 0.002,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 0
+    },
+    {
+      "DN": 7,
+      "area_km2": 0.0047,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 0
+    },
+    {
+      "DN": 8,
+      "area_km2": 0.0197,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 0
+    },
+    {
+      "DN": 9,
+      "area_km2": 0.0684,
+      "domicilios_na_cota": 63,
+      "domicilios_acumulados": 63
+    },
+    {
+      "DN": 10,
+      "area_km2": 0.0914,
+      "domicilios_na_cota": 208,
+      "domicilios_acumulados": 271
+    },
+    {
+      "DN": 11,
+      "area_km2": 0.0819,
+      "domicilios_na_cota": 66,
+      "domicilios_acumulados": 337
+    },
+    {
+      "DN": 12,
+      "area_km2": 0.095,
+      "domicilios_na_cota": 32,
+      "domicilios_acumulados": 369
+    },
+    {
+      "DN": 13,
+      "area_km2": 0.1309,
+      "domicilios_na_cota": 35,
+      "domicilios_acumulados": 404
+    },
+    {
+      "DN": 14,
+      "area_km2": 0.2047,
+      "domicilios_na_cota": 19,
+      "domicilios_acumulados": 423
+    },
+    {
+      "DN": 15,
+      "area_km2": 0.3129,
+      "domicilios_na_cota": 39,
+      "domicilios_acumulados": 462
+    },
+    {
+      "DN": 16,
+      "area_km2": 0.3701,
+      "domicilios_na_cota": 17,
+      "domicilios_acumulados": 479
+    },
+    {
+      "DN": 17,
+      "area_km2": 0.3667,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 479
+    },
+    {
+      "DN": 18,
+      "area_km2": 0.4044,
+      "domicilios_na_cota": 3,
+      "domicilios_acumulados": 482
+    },
+    {
+      "DN": 19,
+      "area_km2": 0.44,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 482
+    },
+    {
+      "DN": 20,
+      "area_km2": 0.5602,
+      "domicilios_na_cota": 30,
+      "domicilios_acumulados": 512
+    },
+    {
+      "DN": 21,
+      "area_km2": 0.7345,
+      "domicilios_na_cota": 203,
+      "domicilios_acumulados": 715
+    },
+    {
+      "DN": 22,
+      "area_km2": 0.7211,
+      "domicilios_na_cota": 53,
+      "domicilios_acumulados": 768
+    },
+    {
+      "DN": 23,
+      "area_km2": 0.8444,
+      "domicilios_na_cota": 76,
+      "domicilios_acumulados": 844
+    },
+    {
+      "DN": 24,
+      "area_km2": 1.0109,
+      "domicilios_na_cota": 387,
+      "domicilios_acumulados": 1231
+    },
+    {
+      "DN": 25,
+      "area_km2": 1.0572,
+      "domicilios_na_cota": 724,
+      "domicilios_acumulados": 1955
+    },
+    {
+      "DN": 26,
+      "area_km2": 1.3489,
+      "domicilios_na_cota": 848,
+      "domicilios_acumulados": 2803
+    },
+    {
+      "DN": 27,
+      "area_km2": 1.4017,
+      "domicilios_na_cota": 1008,
+      "domicilios_acumulados": 3811
+    },
+    {
+      "DN": 28,
+      "area_km2": 1.4004,
+      "domicilios_na_cota": 581,
+      "domicilios_acumulados": 4392
+    },
+    {
+      "DN": 29,
+      "area_km2": 1.3537,
+      "domicilios_na_cota": 566,
+      "domicilios_acumulados": 4958
+    },
+    {
+      "DN": 30,
+      "area_km2": 1.5379,
+      "domicilios_na_cota": 1089,
+      "domicilios_acumulados": 6047
+    },
+    {
+      "DN": 31,
+      "area_km2": 1.6046,
+      "domicilios_na_cota": 757,
+      "domicilios_acumulados": 6804
+    },
+    {
+      "DN": 32,
+      "area_km2": 1.6985,
+      "domicilios_na_cota": 734,
+      "domicilios_acumulados": 7538
+    },
+    {
+      "DN": 33,
+      "area_km2": 1.6691,
+      "domicilios_na_cota": 382,
+      "domicilios_acumulados": 7920
+    },
+    {
+      "DN": 34,
+      "area_km2": 1.7516,
+      "domicilios_na_cota": 517,
+      "domicilios_acumulados": 8437
+    },
+    {
+      "DN": 35,
+      "area_km2": 1.7726,
+      "domicilios_na_cota": 284,
+      "domicilios_acumulados": 8721
+    },
+    {
+      "DN": 36,
+      "area_km2": 1.7359,
+      "domicilios_na_cota": 263,
+      "domicilios_acumulados": 8984
+    },
+    {
+      "DN": 37,
+      "area_km2": 1.8211,
+      "domicilios_na_cota": 343,
+      "domicilios_acumulados": 9327
+    },
+    {
+      "DN": 38,
+      "area_km2": 1.8313,
+      "domicilios_na_cota": 296,
+      "domicilios_acumulados": 9623
+    },
+    {
+      "DN": 39,
+      "area_km2": 1.9194,
+      "domicilios_na_cota": 251,
+      "domicilios_acumulados": 9874
+    },
+    {
+      "DN": 40,
+      "area_km2": 1.7885,
+      "domicilios_na_cota": 201,
+      "domicilios_acumulados": 10075
+    },
+    {
+      "DN": 41,
+      "area_km2": 1.7681,
+      "domicilios_na_cota": 456,
+      "domicilios_acumulados": 10531
+    },
+    {
+      "DN": 42,
+      "area_km2": 1.6675,
+      "domicilios_na_cota": 260,
+      "domicilios_acumulados": 10791
+    },
+    {
+      "DN": 43,
+      "area_km2": 1.5839,
+      "domicilios_na_cota": 203,
+      "domicilios_acumulados": 10994
+    },
+    {
+      "DN": 44,
+      "area_km2": 1.4395,
+      "domicilios_na_cota": 264,
+      "domicilios_acumulados": 11258
+    },
+    {
+      "DN": 45,
+      "area_km2": 1.3188,
+      "domicilios_na_cota": 236,
+      "domicilios_acumulados": 11494
+    },
+    {
+      "DN": 46,
+      "area_km2": 1.255,
+      "domicilios_na_cota": 239,
+      "domicilios_acumulados": 11733
+    },
+    {
+      "DN": 47,
+      "area_km2": 1.126,
+      "domicilios_na_cota": 258,
+      "domicilios_acumulados": 11991
+    },
+    {
+      "DN": 48,
+      "area_km2": 1.1024,
+      "domicilios_na_cota": 299,
+      "domicilios_acumulados": 12290
+    },
+    {
+      "DN": 49,
+      "area_km2": 0.9821,
+      "domicilios_na_cota": 233,
+      "domicilios_acumulados": 12523
+    },
+    {
+      "DN": 50,
+      "area_km2": 0.9114,
+      "domicilios_na_cota": 264,
+      "domicilios_acumulados": 12787
+    },
+    {
+      "DN": 51,
+      "area_km2": 0.8734,
+      "domicilios_na_cota": 245,
+      "domicilios_acumulados": 13032
+    },
+    {
+      "DN": 52,
+      "area_km2": 0.7907,
+      "domicilios_na_cota": 272,
+      "domicilios_acumulados": 13304
+    },
+    {
+      "DN": 53,
+      "area_km2": 0.744,
+      "domicilios_na_cota": 235,
+      "domicilios_acumulados": 13539
+    },
+    {
+      "DN": 54,
+      "area_km2": 0.6952,
+      "domicilios_na_cota": 224,
+      "domicilios_acumulados": 13763
+    },
+    {
+      "DN": 55,
+      "area_km2": 0.6674,
+      "domicilios_na_cota": 211,
+      "domicilios_acumulados": 13974
+    },
+    {
+      "DN": 56,
+      "area_km2": 0.6426,
+      "domicilios_na_cota": 207,
+      "domicilios_acumulados": 14181
+    },
+    {
+      "DN": 57,
+      "area_km2": 0.6235,
+      "domicilios_na_cota": 270,
+      "domicilios_acumulados": 14451
+    },
+    {
+      "DN": 58,
+      "area_km2": 0.6056,
+      "domicilios_na_cota": 208,
+      "domicilios_acumulados": 14659
+    },
+    {
+      "DN": 59,
+      "area_km2": 0.5978,
+      "domicilios_na_cota": 263,
+      "domicilios_acumulados": 14922
+    },
+    {
+      "DN": 60,
+      "area_km2": 0.5876,
+      "domicilios_na_cota": 214,
+      "domicilios_acumulados": 15136
+    },
+    {
+      "DN": 61,
+      "area_km2": 0.5739,
+      "domicilios_na_cota": 216,
+      "domicilios_acumulados": 15352
+    },
+    {
+      "DN": 62,
+      "area_km2": 0.6048,
+      "domicilios_na_cota": 164,
+      "domicilios_acumulados": 15516
+    },
+    {
+      "DN": 63,
+      "area_km2": 0.5806,
+      "domicilios_na_cota": 206,
+      "domicilios_acumulados": 15722
+    },
+    {
+      "DN": 64,
+      "area_km2": 0.5782,
+      "domicilios_na_cota": 203,
+      "domicilios_acumulados": 15925
+    },
+    {
+      "DN": 65,
+      "area_km2": 0.5616,
+      "domicilios_na_cota": 140,
+      "domicilios_acumulados": 16065
+    },
+    {
+      "DN": 66,
+      "area_km2": 0.5276,
+      "domicilios_na_cota": 163,
+      "domicilios_acumulados": 16228
+    },
+    {
+      "DN": 67,
+      "area_km2": 0.5217,
+      "domicilios_na_cota": 172,
+      "domicilios_acumulados": 16400
+    },
+    {
+      "DN": 68,
+      "area_km2": 0.5007,
+      "domicilios_na_cota": 165,
+      "domicilios_acumulados": 16565
+    },
+    {
+      "DN": 69,
+      "area_km2": 0.4982,
+      "domicilios_na_cota": 133,
+      "domicilios_acumulados": 16698
+    },
+    {
+      "DN": 70,
+      "area_km2": 0.5084,
+      "domicilios_na_cota": 161,
+      "domicilios_acumulados": 16859
+    },
+    {
+      "DN": 71,
+      "area_km2": 0.5249,
+      "domicilios_na_cota": 104,
+      "domicilios_acumulados": 16963
+    },
+    {
+      "DN": 72,
+      "area_km2": 0.507,
+      "domicilios_na_cota": 139,
+      "domicilios_acumulados": 17102
+    },
+    {
+      "DN": 73,
+      "area_km2": 0.4934,
+      "domicilios_na_cota": 95,
+      "domicilios_acumulados": 17197
+    },
+    {
+      "DN": 74,
+      "area_km2": 0.5261,
+      "domicilios_na_cota": 87,
+      "domicilios_acumulados": 17284
+    },
+    {
+      "DN": 75,
+      "area_km2": 0.5043,
+      "domicilios_na_cota": 111,
+      "domicilios_acumulados": 17395
+    },
+    {
+      "DN": 76,
+      "area_km2": 0.4733,
+      "domicilios_na_cota": 77,
+      "domicilios_acumulados": 17472
+    },
+    {
+      "DN": 77,
+      "area_km2": 0.4301,
+      "domicilios_na_cota": 90,
+      "domicilios_acumulados": 17562
+    },
+    {
+      "DN": 78,
+      "area_km2": 0.349,
+      "domicilios_na_cota": 98,
+      "domicilios_acumulados": 17660
+    },
+    {
+      "DN": 79,
+      "area_km2": 0.3023,
+      "domicilios_na_cota": 76,
+      "domicilios_acumulados": 17736
+    },
+    {
+      "DN": 80,
+      "area_km2": 0.2667,
+      "domicilios_na_cota": 77,
+      "domicilios_acumulados": 17813
+    },
+    {
+      "DN": 81,
+      "area_km2": 0.2791,
+      "domicilios_na_cota": 82,
+      "domicilios_acumulados": 17895
+    },
+    {
+      "DN": 82,
+      "area_km2": 0.3373,
+      "domicilios_na_cota": 35,
+      "domicilios_acumulados": 17930
+    },
+    {
+      "DN": 83,
+      "area_km2": 0.3472,
+      "domicilios_na_cota": 18,
+      "domicilios_acumulados": 17948
+    },
+    {
+      "DN": 84,
+      "area_km2": 0.3914,
+      "domicilios_na_cota": 10,
+      "domicilios_acumulados": 17958
+    },
+    {
+      "DN": 85,
+      "area_km2": 0.405,
+      "domicilios_na_cota": 6,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 86,
+      "area_km2": 0.3147,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 87,
+      "area_km2": 0.2157,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 88,
+      "area_km2": 0.1402,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 89,
+      "area_km2": 0.1202,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 90,
+      "area_km2": 0.0742,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 91,
+      "area_km2": 0.0296,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 92,
+      "area_km2": 0.0117,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 93,
+      "area_km2": 0.011,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 94,
+      "area_km2": 0.0082,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 95,
+      "area_km2": 0.0119,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 96,
+      "area_km2": 0.0107,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 97,
+      "area_km2": 0.0108,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 98,
+      "area_km2": 0.0106,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 99,
+      "area_km2": 0.0071,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 100,
+      "area_km2": 0.0068,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 101,
+      "area_km2": 0.0056,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 102,
+      "area_km2": 0.0065,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 103,
+      "area_km2": 0.0072,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 104,
+      "area_km2": 0.0059,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 105,
+      "area_km2": 0.0073,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 106,
+      "area_km2": 0.0081,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 107,
+      "area_km2": 0.0106,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 108,
+      "area_km2": 0.0064,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 109,
+      "area_km2": 0.0052,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 110,
+      "area_km2": 0.0033,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 111,
+      "area_km2": 0.0013,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 112,
+      "area_km2": 0.0011,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 113,
+      "area_km2": 0.0008,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 114,
+      "area_km2": 0.0006,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    },
+    {
+      "DN": 115,
+      "area_km2": 0.0001,
+      "domicilios_na_cota": 0,
+      "domicilios_acumulados": 17964
+    }
+  ]
+}

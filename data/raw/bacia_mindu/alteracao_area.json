@@ -1,0 +1,26 @@
+{
+  "removed_holes": 15,
+  "removed_holes_areas_m2": [
+    78.1027287421748,
+    0.00013095395115669817,
+    14.64424005849287,
+    307.52724548778497,
+    9.762769461609423,
+    4.881328874783321,
+    4.8819349930799945,
+    9.76369153521955,
+    24.409242380410433,
+    1.4281613402999938e-07,
+    29.29090732522309,
+    4.881814672356995,
+    29.290794840548187,
+    146.4538555910367,
+    136.67824493651278
+  ],
+  "original_area_km2": 64.84517538668086,
+  "new_area_km2": 64.84597595561085,
+  "added_area_m2": 800.5689299851656,
+  "external_contour_preserved": true,
+  "epsg": "32720",
+  "note": "All interior rings removed at user request; original retained. Index areas previously calculated use original polygon."
+}

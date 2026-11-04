@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  # Banco de Dados PostgreSQL com a extensão espacial PostGIS
+  db_postgis:
+    image: postgis/postgis:15-3.3
+    container_name: sigweb_postgis
+    environment:
+      POSTGRES_USER: sigweb_admin
+      POSTGRES_PASSWORD: sigweb_password
+      POSTGRES_DB: sigweb_mindu
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Este mapeamento fará com que o banco execute nosso script SQL automaticamente ao iniciar a 1ª vez
+      - ./db/01_init_schema.sql:/docker-entrypoint-initdb.d/01_init_schema.sql
+    restart: unless-stopped
+
+volumes:
+  pgdata:

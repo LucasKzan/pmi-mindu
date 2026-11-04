@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigweb - Protótipo Bacia do Mindu</title>
+    <!-- Leaflet CSS via CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+        }
+        #header {
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        #header p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #a5a5b5;
+        }
+        #map {
+            height: calc(100vh - 65px);
+            width: 100%;
+        }
+        /* Painel flutuante de informações */
+        .info-panel {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        .info-panel h4 { margin-top: 0; color: #d9534f; }
+        .legend {
+            background: white;
+            padding: 10px;
+            line-height: 1.5;
+            color: #333;
+            border-radius: 5px;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <div>
+            <h1>SIGWEB - Monitoramento Inteligente</h1>
+            <p>Bacia do Igarapé do Mindu | Atlas do Racismo Ambiental</p>
+        </div>
+        <div>
+            <span style="background: #d9534f; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.85rem;">STATUS: EM ALERTA</span>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Leaflet JS via CDN -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="mindu_basemap.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+geopandas==0.14.3
+pandas==2.2.0
+geobr==0.2.0
+requests==2.31.0
+matplotlib==3.8.2
+shapely==2.0.2
+folium==0.15.1
+jupyter==1.0.0
+
+earthengine-api==0.1.386
+geemap==0.30.4

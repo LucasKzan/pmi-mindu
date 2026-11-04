@@ -1,0 +1,102 @@
+{
+  "area_bacia_km2": 64.85,
+  "perimetro_bacia_km": 66.46,
+  "total_bairros_bhm": 17,
+  "total_bairros_cd2022_intersect": 21,
+  "total_setores_censitarios": 875,
+  "total_setores_risco_cprm": 79,
+  "total_pessoas_risco_cprm": 29332,
+  "total_edificacoes_risco_cprm": 7333,
+  "total_domicilios_afetados_inundacao": 17964,
+  "extensao_rede_drenagem_km": 175.27,
+  "compartimentos": [
+    {
+      "fid": 1.0,
+      "DN": 228,
+      "curso": "Alto Curso",
+      "codigo": "alto_curso",
+      "perfil_socioambiental": "Expansão Urbana Periférica / Nascentes (Cidade de Deus, Jorge Teixeira)",
+      "area_km2": 15.14,
+      "domicilios_inundacao": 7886,
+      "setores_risco_cprm": 31,
+      "pessoas_risco_cprm": 15080,
+      "edificacoes_risco_cprm": 3770
+    },
+    {
+      "fid": 21.0,
+      "DN": 100,
+      "curso": "Médio Curso",
+      "codigo": "medio_curso",
+      "perfil_socioambiental": "Alta Renda / Forte Impermeabilização (Parque 10, Aleixo, N.S. das Graças)",
+      "area_km2": 31.48,
+      "domicilios_inundacao": 8166,
+      "setores_risco_cprm": 38,
+      "pessoas_risco_cprm": 11100,
+      "edificacoes_risco_cprm": 2775
+    },
+    {
+      "fid": 145.0,
+      "DN": 286,
+      "curso": "Baixo Curso",
+      "codigo": "baixo_curso",
+      "perfil_socioambiental": "Vulnerabilidade Crítica / Repiquete + Enxurrada (São Raimundo, Glória, Aparecida)",
+      "area_km2": 18.22,
+      "domicilios_inundacao": 1912,
+      "setores_risco_cprm": 10,
+      "pessoas_risco_cprm": 3152,
+      "edificacoes_risco_cprm": 788
+    }
+  ],
+  "top_bairros_inundacao": [
+    {
+      "NOME": "CIDADE NOVA",
+      "ZONAS": "NORTE",
+      "domicilios_inundacao": 6440
+    },
+    {
+      "NOME": "SÃO JOSÉ OPERÁRIO",
+      "ZONAS": "LESTE",
+      "domicilios_inundacao": 3749
+    },
+    {
+      "NOME": "JORGE TEIXEIRA",
+      "ZONAS": "LESTE",
+      "domicilios_inundacao": 2712
+    },
+    {
+      "NOME": "COROADO",
+      "ZONAS": "LESTE",
+      "domicilios_inundacao": 1962
+    },
+    {
+      "NOME": "TANCREDO NEVES",
+      "ZONAS": "LESTE",
+      "domicilios_inundacao": 1714
+    },
+    {
+      "NOME": "NOSSA SENHORA DAS GRAÇAS",
+      "ZONAS": "CENTRO-SUL",
+      "domicilios_inundacao": 417
+    },
+    {
+      "NOME": "PARQUE 10 DE NOVEMBRO",
+      "ZONAS": "CENTRO-SUL",
+      "domicilios_inundacao": 370
+    },
+    {
+      "NOME": "ALEIXO",
+      "ZONAS": "CENTRO-SUL",
+      "domicilios_inundacao": 346
+    },
+    {
+      "NOME": "FLORES",
+      "ZONAS": "CENTRO-SUL",
+      "domicilios_inundacao": 233
+    },
+    {
+      "NOME": "ZUMBI DOS PALMARES",
+      "ZONAS": "LESTE",
+      "domicilios_inundacao": 16
+    }
+  ]
+}
