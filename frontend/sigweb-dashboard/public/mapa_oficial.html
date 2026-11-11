@@ -249,6 +249,11 @@
     <script>
         const map = L.map('map').setView([-3.059891, -59.967774], 12);
 
+        // Painel exclusivo para que os pinos de alertas fiquem no topo absoluto acima de qualquer polígono/heatmap!
+        map.createPane('alertasPane');
+        map.getPane('alertasPane').style.zIndex = 650;
+        map.getPane('alertasPane').style.pointerEvents = 'auto';
+
         const esriStreet = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri',
             maxZoom: 20
@@ -654,7 +659,8 @@
                             const isPend = feat.properties.status === 'PENDENTE';
                             return L.marker(latlng, {
                                 icon: isPend ? iconPendente : iconAprovado,
-                                zIndexOffset: 2000
+                                pane: 'alertasPane',
+                                zIndexOffset: 3000
                             });
                         },
                         onEachFeature: (feat, l) => {
