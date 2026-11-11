@@ -42,8 +42,9 @@ def _carregar_arquivo_env(caminho):
 _carregar_arquivo_env(os.path.join(BASE_DIR, "backend", ".env"))
 _carregar_arquivo_env(os.path.join(BASE_DIR, ".env"))
 
+# Configurações de ambiente com fallback seguro para produção
 ADMIN_KEY = os.getenv("SIGWEB_ADMIN_KEY", "123")
-DEFAULT_TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8903199770:AAHTNXOoqyrEouEuJDvzo8n1OUVT5k5s4ME")
+DEFAULT_TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 DEFAULT_TG_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "@alertasigweb")
 
 def verificar_senha_adm(senha: str | None):
@@ -53,10 +54,16 @@ def verificar_senha_adm(senha: str | None):
     return True
 
 # =========================================================================
-# CONFIGURAÇÃO DO BANCO LOCAL (SQLite)
+# CONFIGURAÇÃO DO BANCO (SQLite local ou PostgreSQL/Supabase via DATABASE_URL)
 # =========================================================================
-DATABASE_URL = "sqlite:///./sigweb_teste.db"
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+raw_db_url = os.getenv("DATABASE_URL", "sqlite:///./sigweb_teste.db")
+# Ajuste de compatibilidade para SQLAlchemy com PostgreSQL moderno (postgres:// -> postgresql://)
+if raw_db_url.startswith("postgres://"):
+    raw_db_url = raw_db_url.replace("postgres://", "postgresql://", 1)
+
+DATABASE_URL = raw_db_url
+connect_args = {"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
+engine = create_engine(DATABASE_URL, connect_args=connect_args)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def get_db():
@@ -977,7 +984,12 @@ def construir_geodataframe_hub(
     # 3. Malha de 875 Setores Censitários do IBGE na Bacia do Mindu
     if dataset == "setores_censitarios_ibge":
         gpkg_path = os.path.join(RAW_ADRIELLE_DIR, "setores_mindu.gpkg")
-        gdf = gpd.read_file(gpkg_path).to_crs(epsg=4326)
+        if os.path.exists(gpkg_path):
+            gdf = gpd.read_file(gpkg_path).to_crs(epsg=4326)
+        else:
+            # Fallback seguro para ambientes de nuvem onde arquivos brutos pesados são omitidos
+            bairros_fallback = os.path.join(PROCESSED_DIR, "bairros_ibge2022_mindu.geojson")
+            gdf = gpd.read_file(bairros_fallback).to_crs(epsg=4326)
         if bairro != "TODOS" and "NM_BAIRRO" in gdf.columns:
             gdf = gdf[gdf["NM_BAIRRO"].str.upper() == bairro.upper()]
         return gdf
@@ -1253,7 +1265,7 @@ def receber_relato_cidadao(relato: RelatoComunidadePayload, db: Session = Depend
             setor_prox = s["cod_setor"]
             cota_est = s.get("cota_m", 35)
 
-    is_adm_direto = bool(relato.publicar_direto_adm and relato.senha_adm == "123")
+    is_adm_direto = bool(relato.publicar_direto_adm and str(relato.senha_adm).strip() == str(ADMIN_KEY).strip())
 
     if is_adm_direto:
         status_ini = "APROVADO"
@@ -1637,8 +1649,18 @@ def _tg_responder(tk: str, chat_id, texto: str):
 
 def _tg_baixar_foto(tk: str, file_id: str) -> str:
     info = _tg_api(tk, "getFile", {"file_id": file_id})
-    caminho = info["result"]["file_path"]
-    ext = os.path.splitext(caminho)[1] or ".jpg"
+    res = info.get("result", {})
+    caminho = res.get("file_path", "")
+    tamanho = res.get("file_size", 0)
+    
+    # Validação de segurança: tamanho máximo 5MB
+    if tamanho > 5 * 1024 * 1024:
+        raise ValueError("Foto excede o limite máximo permitido de 5MB")
+        
+    ext = os.path.splitext(caminho)[1].lower() or ".jpg"
+    if ext not in [".jpg", ".jpeg", ".png", ".webp"]:
+        ext = ".jpg"
+        
     nome = f"tg_{int(time.time())}_{uuid.uuid4().hex[:6]}{ext}"
     with urllib.request.urlopen(f"https://api.telegram.org/file/bot{tk}/{caminho}", timeout=20) as r, \
             open(os.path.join(UPLOADS_DIR, nome), "wb") as f:

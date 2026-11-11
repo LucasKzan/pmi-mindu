@@ -22,8 +22,19 @@ __pycache__/
 .env.production.local
 backend/.env
 
-# Backups e logs locais
+# Backups, arquivos brutos pesados (>10MB) e logs locais
 *.log
+*.zip
+*.tar.gz
+*.tif
+*.tiff
 data/raw/backup_brutos/
+data/raw/Adrielle_Dados/*.tif
+data/raw/Adrielle_Dados/*.shp
+data/raw/Adrielle_Dados/*.dbf
+data/raw/Adrielle_Dados/*.shx
+data/raw/Adrielle_Dados/*.sbn
+data/raw/Adrielle_Dados/*.sbx
 .DS_Store
 Thumbs.db
+*.db-journal
