@@ -44,7 +44,7 @@ _carregar_arquivo_env(os.path.join(BASE_DIR, ".env"))
 
 # Configurações de ambiente com fallback seguro para produção
 ADMIN_KEY = os.getenv("SIGWEB_ADMIN_KEY", "123")
-DEFAULT_TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+DEFAULT_TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8903199770:AAHTNXOoqyrEouEuJDvzo8n1OUVT5k5s4ME")
 DEFAULT_TG_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "@alertasigweb")
 
 def verificar_senha_adm(senha: str | None):

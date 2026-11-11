@@ -771,7 +771,7 @@ export default function AdminCuradoriaPage() {
             <div className="flex-1 relative">
               <iframe
                 ref={iframeRef}
-                src="/mapa_oficial.html?modo=adm"
+                src={`/mapa_oficial.html?modo=adm&apiUrl=${encodeURIComponent(getApiUrl())}`}
                 className="w-full h-full border-0"
                 title="Mapa de Auditoria ADM"
               />

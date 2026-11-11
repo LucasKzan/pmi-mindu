@@ -1195,7 +1195,7 @@ export default function Dashboard() {
         {/* MAPA OCUPANDO 100% DA LARGURA E ALTURA */}
         <iframe
           ref={iframeRef}
-          src="/mapa_oficial.html"
+          src={`/mapa_oficial.html?apiUrl=${encodeURIComponent(getApiUrl())}`}
           className="w-full h-full border-0"
           title="Mapa Oficial da Sub-Bacia do Mindu"
         />

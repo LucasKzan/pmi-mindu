@@ -285,17 +285,17 @@
             const bairroDetectado = detectarBairroPorCoordenada(lat, lng);
 
             if (tempPickedMarker) map.removeLayer(tempPickedMarker);
-            tempPickedMarker = L.marker([lat, lng]).addTo(map)
+            tempPickedMarker = L.marker([lat, lng], { zIndexOffset: 1000 }).addTo(map)
                 .bindPopup(`
                     <div class="sig-popup-card" style="min-width: 220px;">
                         <div class="sig-popup-header" style="background:#dbeafe; color:#1e40af;">
-                            🎯 Ponto Exato Selecionado
+                            🎯 Ponto Marcado no Mapa
                         </div>
                         ${bairroDetectado ? `<div class="sig-popup-row"><span>Bairro:</span><strong>${bairroDetectado}</strong></div>` : ''}
                         <div class="sig-popup-row"><span>Latitude:</span><code>${lat}</code></div>
                         <div class="sig-popup-row"><span>Longitude:</span><code>${lng}</code></div>
-                        <div style="font-size:10px; color:#64748b; margin-top:6px; text-align:center;">
-                            Coordenadas preenchidas no formulário ADM
+                        <div style="font-size:10px; color:#16a34a; font-weight:600; margin-top:6px; text-align:center;">
+                            ✓ Localização capturada para envio do relato!
                         </div>
                     </div>
                 `)
@@ -556,10 +556,13 @@
                 renderHeatPorCota(999);
             });
 
-        // 8. Relatos Ciência Cidadã (API FastAPI - Dinâmico para localhost ou produção)
-        const API_URL = (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1')
-            ? `${window.location.protocol}//${window.location.hostname}:8000`
-            : 'http://localhost:8000';
+        // 8. Relatos Ciência Cidadã (API FastAPI - Dinâmico para localhost, Vercel ou Render)
+        const urlParams = new URLSearchParams(window.location.search);
+        let API_URL = urlParams.get('apiUrl') || (
+            (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1')
+                ? 'https://pmi-mindu-backend.onrender.com'
+                : 'http://localhost:8000'
+        );
 
         let mostrarPendentesAdm = false;
         function carregarRelatosCienciaCidada(incluirPendentes = mostrarPendentesAdm) {
@@ -689,6 +692,13 @@
         window.addEventListener('message', (event) => {
             const msg = event.data;
             if (!msg || !msg.type) return;
+
+            // Configuração dinâmica da URL da API vinda do React
+            if (msg.type === 'SET_API_URL' && msg.apiUrl) {
+                API_URL = msg.apiUrl;
+                carregarRelatosCienciaCidada();
+                carregarFocosQueimadasNASA();
+            }
 
             const badge = document.getElementById('filter-indicator');
 
