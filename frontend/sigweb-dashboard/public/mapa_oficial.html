@@ -129,6 +129,11 @@
             text-align: right;
             word-break: break-word;
         }
+        .sigweb-div-icon {
+            background: transparent !important;
+            border: none !important;
+            overflow: visible !important;
+        }
         /* Marcador Moderno SVG com Pulso Fluorescente para Alertas de Foco */
         .sigweb-pin-wrap {
             position: relative;
@@ -681,8 +686,15 @@
                             `);
                         }
                     }).addTo(grpCienciaCidada);
+
+                    // Garante que a camada de ciência cidadã está adicionada ao mapa
+                    if (!map.hasLayer(grpCienciaCidada)) {
+                        map.addLayer(grpCienciaCidada);
+                    }
                 })
-                .catch(() => {});
+                .catch((err) => {
+                    console.error('Erro ao carregar relatos no mapa:', err);
+                });
         }
         const isAdmMapMode = window.location.search.includes('modo=adm');
         carregarRelatosCienciaCidada(isAdmMapMode);
